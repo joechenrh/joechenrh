@@ -12,10 +12,10 @@ env:
   # please change to your own config.
   # this actions generate only this year
   # If you fork this please change the type to yours below
-  TYPE: 'ns, duolingo, shanbay, issue, twitter, pass' # support strava/gpx/ns/cichang/shanbay/duolingo/issue/leetcode/twitter, Please change the 'pass' it to your own separated by commas
-  ME: Yihong0618
-  GITHUB_NAME: yihong0618
-  GITHUB_EMAIL: zouzou0208@gmail.com
+  TYPE: 'leetcode' # support strava/gpx/ns/cichang/shanbay/duolingo/issue/leetcode/twitter, Please change the 'pass' it to your own separated by commas
+  ME: joechenrh
+  GITHUB_NAME: joechenrh
+  GITHUB_EMAIL: joechenrh@gmail.com
 
 jobs:
   sync:
@@ -77,7 +77,7 @@ jobs:
       - name: Run sync leetcode script
         if: contains(env.TYPE, 'leetcode')
         run: |
-          python cli.py --type leetcode --leetcode_cookie  '${{ secrets.LEETCODE_COOKIE }} --me ${{ env.ME }}
+          python cli.py --type leetcode --leetcode_cookie  '${{ secrets.LEETCODE_COOKIE }}' --me ${{ env.ME }} --year 2021 --is-cn --with-animation
 
       - name: Run sync twitter script
         if: contains(env.TYPE, 'twitter')
@@ -86,7 +86,7 @@ jobs:
 
       - name: Mv svg files to examples
         # only for me to show
-        if: github.repository_owner == 'yihong0618'
+        if: github.repository_owner == 'joechenrh'
         run: mv OUT_FOLDER/*.svg examples/
 
       - name: Push new svg posters
