@@ -5,4 +5,4 @@
 - Use C++ and Python
 - Learning database
 
-![](https://github.com/joechenrh/joechenrh/blob/main/examples/leetcode.svg)
+[![joechenrh's GitHub stats](https://github-readme-stats.vercel.app/api?username=joechenrh)](https://github.com/anuraghazra/github-readme-stats)
