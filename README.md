@@ -7,7 +7,7 @@
 - Interested in optimizer
 
 ```bash
-echo `base64 -d <<< am9lY2hlbi1yaA==`
+echo am9lY2hlbi1yaA== | base64 -d
 ```
 
 [![joechenrh's GitHub stats](https://github-readme-stats.vercel.app/api?username=joechenrh)](https://github.com/anuraghazra/github-readme-stats)
